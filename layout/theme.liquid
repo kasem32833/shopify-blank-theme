@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Shopify Blank Theme</title>
+
+        {{ 'style.css' | asset_url | stylesheet_tag }}
+        {{ 'tailwind.css' | asset_url | stylesheet_tag }}
+
+        {{content_for_header}}
+    </head>
+    <body>
+
+        {% render "header" %}
+
+        {{content_for_layout}}
+        {% render "home" %}
+        
+        
+        {% render "footer" %}
+        
+    </body>
+</html>
