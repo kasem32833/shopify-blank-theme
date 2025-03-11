@@ -9,6 +9,7 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-zinc-100: oklch(0.967 0.001 286.375);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -27,6 +28,8 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -368,8 +371,14 @@
       max-width: 96rem !important;
     }
   }
-  .m-18 {
-    margin: calc(var(--spacing) * 18);
+  .m-48 {
+    margin: calc(var(--spacing) * 48);
+  }
+  .m-65 {
+    margin: calc(var(--spacing) * 65);
+  }
+  .m-97 {
+    margin: calc(var(--spacing) * 97);
   }
   .-mx-4 {
     margin-inline: calc(var(--spacing) * -4);
@@ -383,9 +392,6 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
@@ -398,17 +404,8 @@
   .mt-9 {
     margin-top: calc(var(--spacing) * 9);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
-  }
-  .mt-18 {
-    margin-top: calc(var(--spacing) * 18);
-  }
-  .mt-19 {
-    margin-top: calc(var(--spacing) * 19);
   }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
@@ -416,20 +413,17 @@
   .-mb-25 {
     margin-bottom: calc(var(--spacing) * -25);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
-  }
-  .mb-18 {
-    margin-bottom: calc(var(--spacing) * 18);
   }
   .ml-0 {
     margin-left: calc(var(--spacing) * 0);
@@ -524,6 +518,18 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-\[1px\] {
+    height: 1px;
+  }
+  .h-\[2px\] {
+    height: 2px;
+  }
   .h-screen {
     height: 100vh;
   }
@@ -563,9 +569,6 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
-  .w-4\/3 {
-    width: calc(4/3 * 100%);
-  }
   .w-4\/12 {
     width: calc(4/12 * 100%);
   }
@@ -574,6 +577,12 @@
   }
   .w-5\/12 {
     width: calc(5/12 * 100%);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-6\/12 {
+    width: calc(6/12 * 100%);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -1082,6 +1091,12 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-4xl {
+    border-radius: var(--radius-4xl);
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -1211,12 +1226,6 @@
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
-  .bg-\[f2f0f1\] {
-    background-color: f2f0f1;
-  }
-  .bg-\[f2f0f\] {
-    background-color: f2f0f;
-  }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
@@ -1238,11 +1247,11 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
-  .bg-transparent {
-    background-color: transparent;
-  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-zinc-100 {
+    background-color: var(--color-zinc-100);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1410,6 +1419,18 @@
   .object-top {
     object-position: top;
   }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-48 {
+    padding: calc(var(--spacing) * 48);
+  }
+  .p-97 {
+    padding: calc(var(--spacing) * 97);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -1425,11 +1446,11 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -2004,6 +2025,9 @@
   .outline-solid {
     --tw-outline-style: solid;
     outline-style: solid;
+  }
+  .\[host\:\]port\] {
+    host: ]port;
   }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;
