@@ -13,7 +13,7 @@
         <div class="w-1/2 flex">
             <div class="1/4">
                 {% for i in (1..3) %}
-                    <img width="150px" height="full" src="{{ product.featured_image | asset_url }}" alt="{{ product.title }}">
+                    <img width="150px" height="full"src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
                 {% endfor %}
             </div>
             <div class="3/4 bg-zinc-100 rounded">
