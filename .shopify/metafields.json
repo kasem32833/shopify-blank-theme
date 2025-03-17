@@ -9,7 +9,48 @@
   "market": [],
   "order": [],
   "page": [],
-  "product": [],
+  "product": [
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "display-resolution",
+      "namespace": "shopify",
+      "name": "Display resolution",
+      "description": "Defines resolution of a digital display, e.g. 1280 x 1024, full HD",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "battery-technology",
+      "namespace": "shopify",
+      "name": "Battery technology",
+      "description": "Specifies the type of battery used in electronics, such as alkaline or lithium-ion",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cosmetic-condition",
+      "namespace": "shopify",
+      "name": "Cosmetic condition",
+      "description": "Defines the wear and condition of electronics, e.g. new, opened-never used",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "variant": [],
   "shop": []
 }

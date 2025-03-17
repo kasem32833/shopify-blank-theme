@@ -1,0 +1,23 @@
+
+<div class="bg-black text-center text-white py-2">
+    <div class="container ">
+        <p> {{ section.settings.text }} <a class="underline font-bold" href=""> Sign Up Now</a></p>
+
+       
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Announcement Bar",
+        "settings": [
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "default": "You can change your text form here",
+                "label": "Text"
+            }
+        ]
+    }
+{% endschema %}

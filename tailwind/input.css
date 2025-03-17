@@ -15,10 +15,3 @@ input[type="text"],input[type="email"], input[type="password"]{
     @apply focus:outline-none
 }
 
-<<<<<<< HEAD
-/* section title  */
-.section-title{
-    @apply  uppercase text-5xl font-bold mb-8 
-  }
-=======
->>>>>>> e07168eda75a7d009303b57a0f7b89effdfa087a

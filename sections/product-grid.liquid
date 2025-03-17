@@ -1,0 +1,78 @@
+<div class="border-b border-gray-200 py-16">
+    <div class="section-title text-center mb-12 uppercase">{{ section.settings.title }}</div>
+    <div class="flex flex-wrap -mx-4">
+      {% for product in section.settings.collection.products %}
+        <div class=" w-1/{{ section.settings.column_number.size }} px-4 ">
+          {% render 'singleProductBox', product:product %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-9 border-b border-gray-200 pb-16">
+      <button class="border border-gray-200 px-14 py-4 rounded-full text-xl font-bold cursor-pointer ">{{section.settings.url_text}}</button>
+    </div>
+  </div>
+
+    <script>
+    console.log(section.settings.column_number.options.value)
+
+    </script>
+
+
+  {% schema %}
+    {
+        "name" : "Product-Grid",
+        "settings": [
+            {
+                "id" : "title",
+                "type": "text",
+                "label": "Title",
+                "default": "New Arrival"
+             },
+            {
+                "id" : "collection",
+                "type": "collection",
+                "label": "Collection",
+                
+             },
+            {
+                "id" : "link",
+                "type": "url",
+                "label": "Link",
+                
+             },
+
+            {
+                "id" : "url_text",
+                "type": "text",
+                "label": "Link Text",
+                "default": "View All"
+             },
+
+            {
+                "id" : "column_number",
+                "type": "select",
+                "options": [
+                     {
+                        "label": "one_column",
+                        "value": "1"
+                    },
+                     {
+                        "label": "two_column",
+                        "value": "2"
+                    },
+                     {
+                        "label": "three_column",
+                        "value": "3"
+                    },
+                     {
+                        "label": "four_column",
+                        "value": "4"
+                    },
+                ],
+                "label": "Select Column",
+                "default": "4"
+             },
+             
+        ]
+    }
+  {% endschema %}

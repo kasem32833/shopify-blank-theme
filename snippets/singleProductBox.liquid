@@ -1,7 +1,6 @@
 <div class=" single-product-box text-black">
-  <div class="">
-    <img width="full" height="full" src="{{ 'product-' | append: i | append: '.png' | asset_url }}" alt="">
-    <p class="my-3 font-bold text-[20px]">T-Shirt With Tape Details</p>
+    <img width="full" height="full" src="{{ "product-1.png"  | asset_url }}" alt="">
+    <p class="my-3 font-bold text-[20px]">{{ product.title }}</p>
     <div class="flex items-center my-2">
       <div class="flex mr-2">
         {% for i in (1..5) %}
@@ -13,5 +12,9 @@
       <span>4.5</span>
     </div>
     <span class="text-2xl font-bold">$120</span>
-  </div>
 </div>
+
+
+<script>
+  console.log(product)
+</script>
